@@ -6,7 +6,6 @@ onload = () => {
   };
   const audio = document.getElementById("background-audio");
   document.addEventListener("DOMContentLoaded", () => {
-    // Reproducir el audio y abrir la nueva página cuando el usuario haga clic en el div "carelly"
     document.querySelector(".carelly").addEventListener("click", async () => {
       audio.setTimeout=0;
       audio.pause();
