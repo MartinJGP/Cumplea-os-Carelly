@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
 *,
 
 *::after,
@@ -43,16 +44,14 @@ body {
 }
 .carelly {
   position: absolute;
-  top: 8%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000; /* Asegura que el texto esté por encima de las flores */
-  font-size: 50px; /* Ajusta el tamaño de la fuente según sea necesario */
-  /* Color degradado lavanda */
-  background: -webkit-linear-gradient(45deg, #57078d, #4522c4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Ga Maamli", sans-serif;
+  font-size: 70px; 
+  color: #fff;
+  text-shadow: 0 0 12px #720ea0, 0 0 50px #b41be2, 0 0 100px #6504c0;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
