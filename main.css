@@ -11,14 +11,57 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    overflow: hidden;
     /* padding-top: -30; */
 }
+
+/* Añade esto en tu archivo main.css */
+@keyframes caida {
+    0% { 
+        transform: translate(var(--randomOffset), -10vh);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    70% { 
+        opacity: 0.5; 
+    }
+    100% { 
+        transform: translate(var(--randomOffset), 100vh) rotate(360deg); 
+        opacity: 0; 
+    }
+}
+
+
+
+
+.vaca {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: calc(50% + var(--randomOffset)); /* Ajustado para usar correctamente la variable */
+    width: 150px;
+    height: 130px;
+    background-image: url('flor.png');
+    background-size: cover;
+    animation: caida 5s linear infinite;
+    z-index: 1;
+    /* Asegúrate de definir --randomOffset en tu CSS o mediante JavaScript */
+}
+
+/* Ajusta el left y animation-delay en cada .vaca para variar la posición y el tiempo de inicio */
 
 .botones{
     padding: 9px;
     border-radius: 80px;
     background-color: transparent;
     border: none;
+    z-index: 3;
 }
 
 .botones a{
@@ -39,17 +82,21 @@ body{
 .greetings{
     font-size: 7rem;
     font-weight: 900;
+    z-index: 3;
 }
 .greetings-2{
     font-size: 7rem;
     font-weight: 900;
+    z-index: 3;
 }
 .greetings-2 > span{
     color: #fff;
     text-shadow: 0 0 12px #720ea0, 0 0 50px #b41be2, 0 0 100px #6309b8;
+    z-index: 3;
 }
 .greetings > span{
     animation: glow 2.5s ease-in-out infinite;
+    z-index: 3;
 }
 @keyframes glow{
     0%, 100%{
@@ -111,6 +158,7 @@ body{
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
+    z-index: 3;
 }
 
 .button a{
@@ -118,6 +166,15 @@ body{
     font-size: 1rem;
     color: #111;
 }
+.credits{
+    font-size: 1rem;
+    margin-top: 20px;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+}
+
+
 
 @media screen and (max-width:574px){
     .greetings{
@@ -138,5 +195,31 @@ body{
     
     .button a{
         font-size: 1rem;
+    }
+}
+
+/* Tabletas */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .greetings, .greetings-2 {
+        font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    }
+}
+
+/* Escritorios */
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .greetings, .greetings-2 {
+        font-size: 2rem; /* Aumenta aún más el tamaño del texto */
+    }
+
+    .description {
+        font-size: 1.25rem;
     }
 }

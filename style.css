@@ -48,13 +48,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000; /* Asegura que el texto esté por encima de las flores */
-  font-size: 70px; 
-  color: #fff;
+  font-size: 60px; 
+  color: #d1c8d1;
   text-shadow: 0 0 12px #720ea0, 0 0 50px #b41be2, 0 0 100px #6504c0;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .carelly:hover {
   /*que el mause cambie*/
   cursor: pointer;

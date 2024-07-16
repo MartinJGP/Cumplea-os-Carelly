@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    <title>Flowers</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+        <title>Flowers</title>
+    </head>
 
-<body>
+    <body>
+    <!-- Añade esto en tu archivo index.html dentro del body -->
+        <div class="vaca" style="animation-delay: 0s;"></div>
+        <div class="vaca" style="animation-delay: 2s;"></div>
+        <div class="vaca" style="animation-delay: 4s;"></div>
+        <div class="vaca" style="animation-delay: 6s;"></div>
+        <div class="vaca" style="animation-delay: 8s;"></div>
+        <div class="vaca" style="animation-delay: 10s;"></div>
+<!-- Añade más divs según necesites, ajustando el animation-delay para variar el inicio de la animación -->
     <div class="greetings">
         <span>F</span>
         <span>E</span>
@@ -23,7 +31,7 @@
         <span>M</span>
         <span>P</span>
         <span>L</span>
-         <span>E</span>
+        <span>E</span>
         <span>A</span>
         <span>Ñ</span>
         <span>O</span>
@@ -43,13 +51,52 @@
     </div>
     <div class="button">
         <button class="botones">
-            <a href="flowers.html" style="color: #fff;">:v</a>
+            <a href="flowers.html"  style="color: #fff;">:v</a>
         </button>
     </div>
 
     <div class="credits">
         <p>&copy; Martin</p>
     </div>
+
+    <div id="countdown" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; display: flex; justify-content: center; align-items: center; font-size: 2rem; z-index: 1000;"></div>
+
+    <script>
+        //caida de img
+        document.querySelectorAll('.vaca').forEach(function(vaca) {
+        var randomOffset = Math.random() * 100 - 50 + 'vw';
+        vaca.style.setProperty('--randomOffset', randomOffset);
+        });
+
+        //cooldown
+        document.addEventListener("DOMContentLoaded", function() {
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date(new Date().getFullYear(), 7, 13); // 13 de agosto del año actual. Los meses son base 0.
+
+            function updateCountdown() {
+                const now = new Date();
+                const difference = targetDate - now;
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                if (difference > 0) {
+                    countdownElement.innerHTML = `Aun Faltan ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+                } else {
+                    countdownElement.style.display = 'none';
+                    document.body.classList.remove("not-loaded");
+                    clearInterval(intervalId); // Detiene la actualización del contador
+                }
+            }
+
+            // Actualizar el contador cada segundo
+            let intervalId = setInterval(updateCountdown, 1000);
+        });
+        
+    </script>
+
 </body>
 
 </html>
