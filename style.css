@@ -47,12 +47,12 @@ body {
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000; /* Asegura que el texto esté por encima de las flores */
+  z-index: 1000;
   font-size: 60px; 
   color: #d1c8d1;
   text-shadow: 0 0 12px #720ea0, 0 0 50px #b41be2, 0 0 100px #6504c0;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -232,7 +232,7 @@ body {
   height: var(--h);
   border-top-right-radius: var(--h);
   border-bottom-left-radius: var(--h);
-  background-image: linear-gradient(to top, rgba(18, 2, 27, 0.678), #510981);
+  background-image: linear-gradient(to top, rgba(18, 2, 27, 0.678), #122b09);
 }
 .flower__line__leaf--1 {
   transform: rotate(70deg) rotateY(30deg);
@@ -357,12 +357,14 @@ body {
   background-image: linear-gradient(to top, transparent, transparent 30%, var(--c));
   z-index: 100;
 }
+
 .flower__grass__leaf--1 {
   top: -6%;
   left: 30%;
   --size: 6vmin;
   transform: rotate(-20deg);
   animation: growing-grass-ans--1 2s 2.6s backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--1 {
   0% {
@@ -376,6 +378,7 @@ body {
   --size: 6vmin;
   transform: rotate(10deg);
   animation: growing-grass-ans--2 2s 2.4s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--2 {
   0% {
@@ -389,6 +392,7 @@ body {
   --size: 8vmin;
   transform: rotate(-18deg) rotateX(-20deg);
   animation: growing-grass-ans--3 2s 2.2s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--3 {
   0% {
@@ -402,6 +406,7 @@ body {
   --size: 8vmin;
   transform: rotate(2deg);
   animation: growing-grass-ans--4 2s 2s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--4 {
   0% {
@@ -415,6 +420,7 @@ body {
   --size: 10vmin;
   transform: rotate(-24deg) rotateX(-20deg);
   animation: growing-grass-ans--5 2s 1.8s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--5 {
   0% {
@@ -428,6 +434,7 @@ body {
   --size: 10vmin;
   transform: rotate(10deg);
   animation: growing-grass-ans--6 2s 1.6s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--6 {
   0% {
@@ -438,9 +445,10 @@ body {
 .flower__grass__leaf--7 {
   top: 39%;
   left: 70%;
-  --size: 10vmin;
+  --size: 8vmin;
   transform: rotate(-10deg);
   animation: growing-grass-ans--7 2s 1.4s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--7 {
   0% {
@@ -454,6 +462,7 @@ body {
   --size: 11vmin;
   transform: rotate(10deg);
   animation: growing-grass-ans--8 2s 1.2s linear backwards;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #480d5e 50%, transparent 50%, transparent);
 }
 @keyframes growing-grass-ans--8 {
   0% {
@@ -465,11 +474,12 @@ body {
   position: absolute;
   top: -10%;
   right: 0%;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(16, 61, 7);
   filter: blur(1.5vmin);
   z-index: 100;
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #020a02 50%, transparent 50%, transparent);
 }
 .flower__g-long {
   --w: 2vmin;

@@ -26,10 +26,10 @@ body{
         opacity: 0;
     }
     10% {
-        opacity: 0.5;
+        opacity: 0.2;
     }
     70% { 
-        opacity: 0.5; 
+        opacity: 0.2;
     }
     100% { 
         transform: translate(var(--randomOffset), 100vh) rotate(360deg); 
@@ -51,10 +51,8 @@ body{
     background-size: cover;
     animation: caida 5s linear infinite;
     z-index: 1;
-    /* Asegúrate de definir --randomOffset en tu CSS o mediante JavaScript */
 }
 
-/* Ajusta el left y animation-delay en cada .vaca para variar la posición y el tiempo de inicio */
 
 .botones{
     padding: 9px;
@@ -65,7 +63,7 @@ body{
 }
 
 .botones a{
-    background-color: #0a2be9;
+    background-color: #520675;
     padding: 9px;
     border-radius: 80px;
     -webkit-border-radius: 80px;
@@ -79,22 +77,26 @@ body{
     background-color: rgb(50, 194, 194);
 }
 
-.greetings{
+.greetings,.greetings-2{
     font-size: 7rem;
     font-weight: 900;
     z-index: 3;
 }
-.greetings-2{
+.greetings-3{
     font-size: 7rem;
     font-weight: 900;
     z-index: 3;
 }
-.greetings-2 > span{
+.greetings-3 > span{
     color: #fff;
     text-shadow: 0 0 12px #720ea0, 0 0 50px #b41be2, 0 0 100px #6309b8;
     z-index: 3;
 }
 .greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+    z-index: 3;
+}
+.greetings-2 > span{
     animation: glow 2.5s ease-in-out infinite;
     z-index: 3;
 }
@@ -108,50 +110,53 @@ body{
         text-shadow: none;
     }
 }
-.greetings > span:nth-child(2){
+.greetings > span:nth-child(1){
     animation-delay: .2s ;
 }
-.greetings > span:nth-child(3){
+.greetings > span:nth-child(2){
     animation-delay: .4s ;
 }
-.greetings > span:nth-child(4){
+.greetings > span:nth-child(3){
     animation-delay: .6s;
 }
-.greetings > span:nth-child(5){
+.greetings > span:nth-child(4){
     animation-delay: .8s;
 }
-.greetings > span:nth-child(6){
+.greetings > span:nth-child(5){
     animation-delay: 1s;
 }
-.greetings > span:nth-child(7){
+.greetings > span:nth-child(6){
     animation-delay: 1.2s;
 }
-.greetings > span:nth-child(8){
+.greetings-2 > span:nth-child(1){
     animation-delay: 1.4s;
 }
-.greetings > span:nth-child(9){
+.greetings-2 > span:nth-child(2){
+    animation-delay: 1.5s;
+}
+.greetings-2 > span:nth-child(3){
     animation-delay: 1.6s;
 }
-.greetings > span:nth-child(10){
+.greetings-2 > span:nth-child(4){
+    animation-delay: 1.7s;
+}
+.greetings-2 > span:nth-child(5){
     animation-delay: 1.8s;
 }
-.greetings > span:nth-child(11){
-    animation-delay: 2s;
+.greetings-2 > span:nth-child(6){
+    animation-delay: 1.9s;
 }
-.greetings > span:nth-child(12){
+.greetings-2 > span:nth-child(7){
+    animation-delay: 2.0s;
+}
+.greetings-2 > span:nth-child(8){
+    animation-delay: 2.1s;
+}
+.greetings-2 > span:nth-child(9){
     animation-delay: 2.2s;
 }
-.greetings > span:nth-child(13){
-    animation-delay: 2.4s;
-}
-.greetings > span:nth-child(14){
-    animation-delay: 2.6s;
-}
-.greetings > span:nth-child(15){
-    animation-delay: 2.8s;
-}
-.greetings > span:nth-child(16){
-    animation-delay: 3s;
+.greetings-2 > span:nth-child(10){
+    animation-delay: 2.3s;
 }
 
 
@@ -177,20 +182,22 @@ body{
 
 
 @media screen and (max-width:574px){
-    .greetings{
+    .greetings,.greetings-2{
         display: block;
-        font-size: 4rem;
-        font-weight: 800;
+        font-size: 3.5rem;
+        font-weight: 700;
         text-align: center;
     }
-    .greetings-2{
+    .greetings-3{
         display: block;
         font-size: 4rem;
         font-weight: 800;
         text-align: center;
     }
     .description{
-        font-size: 2rem;
+        font-size: 1rem;
+        text-align: center;
+        margin: 20px;
     }
     
     .button a{
@@ -198,28 +205,3 @@ body{
     }
 }
 
-/* Tabletas */
-@media (min-width: 768px) {
-    .container {
-        width: 80%;
-    }
-
-    .greetings, .greetings-2 {
-        font-size: 1.5rem; /* Aumenta el tamaño del texto */
-    }
-}
-
-/* Escritorios */
-@media (min-width: 1024px) {
-    .container {
-        width: 70%;
-    }
-
-    .greetings, .greetings-2 {
-        font-size: 2rem; /* Aumenta aún más el tamaño del texto */
-    }
-
-    .description {
-        font-size: 1.25rem;
-    }
-}
