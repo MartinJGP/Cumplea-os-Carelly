@@ -49,7 +49,7 @@ body{
     height: 130px;
     background-image: url('flor.png');
     background-size: cover;
-    animation: caida 5s linear infinite;
+    animation: caida 8s linear infinite;
     z-index: 1;
 }
 
@@ -187,6 +187,9 @@ body{
         font-size: 3.5rem;
         font-weight: 700;
         text-align: center;
+    }
+    .greetings-2{
+        font-size: 2.6rem;
     }
     .greetings-3{
         display: block;
